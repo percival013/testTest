@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - FixerFinder</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>FixerFinder</h1>
+    <nav>
+      <a href="dashboard.html" class="active">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="profile.html">My Account</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="service-category">
+      <h2>Service Categories</h2>
+      <ul>
+        <li onclick="filterServices('All')">All</li>
+        <li onclick="filterServices('Plumbing')">Plumbing</li>
+        <li onclick="filterServices('Electrical')">Electrical</li>
+        <li onclick="filterServices('Cleaning')">Cleaning</li>
+        <li onclick="filterServices('Landscaping')">Landscaping</li>
+        <li onclick="filterServices('Painting')">Painting</li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="welcome-message">
+        <h2 id="welcome-message">Welcome! User</h2> 
+        <p id="user-role"></p> <!-- This will display the user's role -->
+        <p>Explore the available services below.</p>
+        <input type="text" id="search-bar" placeholder="Search for services...">
+      </div>
+
+      <div class="product-list" id="product-list"></div>
+      
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-contain">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100010330774463" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jennierubyjane/"  target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw&pp=ygUXbGF0ZXN0IHZpZGVvIGluIHlvdXR1YmU%3D"  target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@madsravs/video/6941666378231352582?is_from_webapp=1&sender_device=pc"  target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+
+      <div class="footerNav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Our Team</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footerBottom">
+        <p>Copyright &copy;2024; Designed by: <span>Grof 3</span> </p>
+      </div>
+
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="dashboard.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+  <script src="dashboard.js"></script>
+  
+</body>
+</html>

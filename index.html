@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png"  href="Fixer.png">
+  <title>FixerFinder</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+        <a href="index.html" class="active"> Home</a>
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="admin-login.html" id="admin-link">Admin</a> <!-- Hidden by default -->
+    </nav>
+</header>
+
+  <section class = "home">
+        <div class="logo">
+            <img src="/img/Fixer.png" alt=""> 
+        </div>
+
+    <div class="home-contents">
+      <h1>Fixer      Finder</h1>
+      <p>Connecting <span> clients  </span>with <span> trusted professionals </span>  for various services.</p>
+
+    </div>
+
+    
+    <div class="auth-buttons">
+    <h1>Login to FixerFinder</h1>
+    <form action="/login" method="post">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+    
+    <p>Not registered yet?   <a href="register.html"> Click here</a> </p>  
+    <button type="submit">Login</button>
+    </form>
+    </div>
+  </section>
+
+  <script>
+    async function checkLoginStatus() {
+        const response = await fetch('/api/check-login', {
+            credentials: 'include'
+        });
+  
+        if (response.ok) {
+            const data = await response.json();
+            if (data.success && data.user.role === 'admin') {
+                document.getElementById('admin-link').style.display = 'block'; // Show admin link
+            }
+        }
+    }
+
+    checkLoginStatus();
+  </script>
+</body>
+</html>

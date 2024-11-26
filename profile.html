@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - FixerFinder</title>
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+  <header>
+    <h1>My Account</h1>
+    <nav>
+      <a href="dashboard.html">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="profile.html" class="active">My Account</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+  </header>
+  <main>
+    <section id="profile-details">
+      <h2>Profile Information</h2>
+      <p>Loading user information...</p>
+    </section>
+
+    <section id="provider-application">
+      <h2>Apply to Become a Service Provider</h2>
+      <form id="provider-application-form">          
+          <label for="gender">Gender:</label>
+          <select id="gender" required>
+              <option value="" disabled selected>Select your gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+          </select>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" required>
+          
+          <label for="proofOfWork">Proof of Work:</label>
+          <input type="text" id="proofOfWork" required>
+          
+          <label for="credentials">Credentials (optional):</label>
+          <input type="text" id="credentials">
+          
+          <button type="submit">Submit Application</button>
+      </form>
+      <p id="application-message"></p>
+    </section>
+
+    <section id="role-switching">
+      <button id="switch-role-button" style="display: none;">Switch Role</button>
+    </section>
+
+    <section id="uploaded-services" style="display: none;">
+      <h2>Your Uploaded Services</h2>
+      <div id="uploaded-services-list"></div>      
+    </section>
+
+    <section id="booking-requests" style="display: none;">
+      <h2>Your Booking Requests</h2>
+      <table id="booking-requests-table">
+          <thead>
+              <tr>
+                  <th>Booking ID</th>
+                  <th>Service Name</th>
+                  <th>User Name</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- booking reqs -->
+          </tbody>
+      </table>
+  </section>
+
+    <section id="booked-requests" style="display: none;">
+      <h2>Your Booked Requests</h2>
+      <table id="booked-requests-table">
+          <thead>
+              <tr>
+                  <th>Booking ID</th>
+                  <th>Service Name</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- booked reqs -->
+          </tbody>
+      </table>
+  </section>
+
+  <section id="advertise-service" style="display: none;">
+    <h2>Advertise Your Service</h2>
+    <form id="advertise-service-form">
+        <label for="serviceName">Service Name:</label>
+        <input type="text" id="serviceName" name="serviceName" required>
+
+        <label for="serviceCategory">Service Category:</label>
+        <select id="serviceCategory" required>
+            <option value="" disabled selected>Select a service category</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Landscaping">Landscaping</option>
+            <option value="Painting">Painting</option>
+        </select>
+
+        <label for="serviceDescription">Service Description:</label>
+        <textarea id="serviceDescription" required></textarea>
+
+        <label for="averagePrice">Average Price:</label>
+        <input type="number" id="averagePrice" required>
+        
+        <input type="hidden" id="city" required>
+        <input type="hidden" id="province" required>
+        <input type="hidden" id="latitude" required>
+        <input type="hidden" id="longitude" required>
+        
+        <button type="submit">Advertise Service</button>
+    </form>
+      <p id="message"></p>
+  </section>
+
+  </main>
+  <button id="logout-button">Logout</button> 
+  <footer>
+    <p>&copy; 2023 FixerFinder. All rights reserved.</p>
+  </footer>
+  <script src="profile.js"></script>
+</body>
+</html>

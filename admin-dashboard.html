@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin-dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <button id="redirect-button">Go to Home</button>
+        </nav>
+    </header>
+
+    <section id="pending-applications">
+        <h2>Pending Applications</h2>
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Proof of Work</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- rows will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="approved-applications">
+        <h2>Approved Applications</h2>
+        <table id="approvedApplicationsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Proof of Work</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Approved applications will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="pending-advertisement-requests">
+        <h2>Pending Advertisement Requests</h2>
+        <table id="advertisement-requests">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Service Name</th>
+                    <th>Service Category</th>
+                    <th>Service Description</th>
+                    <th>Average Price</th>
+                    <th>City</th>
+                    <th>Province</th>
+                    <th>Provider ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- advertisement requests will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="uploaded-services">
+    <h2>All Uploaded Services</h2>
+        <table id="uploaded-services-table">
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Service Category</th>
+                    <th>Service Description</th>
+                    <th>Average Price</th>
+                    <th>Provider ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- uploaded services will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <div id="message"></div>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

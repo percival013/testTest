@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - FixerFinder</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Login to FixerFinder</h1>
+  
+  <form action="/login" method="post">
+    <form action="/login" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+  
+
+
+
+
+
+<p>Not registered yet?   <a href="register.html"> Click here</a> </p>
+<button type="submit" class="btn">Login</button>
+</form>
+  <script src="login.js"></script>
+  <script>
+    async function checkLoginStatus() {
+        const response = await fetch('/api/check-login', {
+            credentials: 'include'
+        });
+  
+        if (response.ok) {
+            const data = await response.json();
+            if (data.success && data.user.role === 'admin') {
+                document.getElementById('admin-link').style.display = 'block'; 
+            }
+        }
+    }
+    checkLoginStatus();
+  </script>
+</body>
+</html>

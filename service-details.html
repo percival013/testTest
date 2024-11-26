@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details - FixerFinder</title>
+    <link rel="stylesheet" href="/css/service-details.css">
+</head>
+<body>
+    <header>
+        <h1>FixerFinder</h1>
+        <nav>
+            <a href="dashboard.html">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="profile.html">My Account</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="service-details" class="service-details-container"></div>
+        
+        <button class="book-service-button" id="book-service-button" onclick="bookService()">Book Service</button>
+
+        <div id="service-details" class="service-details-container">
+    <div>
+        <label for="rating">Rating:</label>
+        <select id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <textarea id="comment-text" placeholder="Leave a comment..."></textarea>
+        <button onclick="submitRating(document.getElementById('rating').value)">Submit Rating</button>
+        <div id="rating-message"></div>
+    </div>
+
+    <ul id="comment-list"></ul>
+</div>
+
+
+    </main>
+    <button class="back-button" onclick="window.history.back()">Back</button>
+    <script src="service-details.js"></script>
+</body>
+</html>
